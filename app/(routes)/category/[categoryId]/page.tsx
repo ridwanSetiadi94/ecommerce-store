@@ -12,13 +12,13 @@ import MobileFilters from "./components/mobile-filters";
 export const revalidate = 0;
 
 interface CategoryPageProps {
-  params: {
+  params: Promise<{
     categoryId: string;
-  };
-  searchParams: {
+  }>;
+  searchParams: Promise<{
     colorId: string;
     sizeId: string;
-  };
+  }>;
 }
 
 async function CategoryPage({
